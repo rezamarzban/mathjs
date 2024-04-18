@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Math Notepad</title>
+  <!-- meta data -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="title" content="Math Notepad">
+
+  <!-- for mobile devices like android and iphone -->
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href="./mathnotepad.min.css" rel="stylesheet" type="text/css">
+  <script src="./mathnotepad.min.js"></script>
+
+</head>
+
+<body>
+<div id="scroll-root">
+
+      <div id="codes" class="codes"></div>
+      <script type="text/javascript">
+        var container = document.getElementById('codes');
+        var editor = new mathnotepad.Editor(container);
+        editor.set({
+          nodes: [
+            {expr: '2.2 * (3.1 + 1.4)'},
+            {expr: 'sqrt(16)'},
+            {expr: 'log(1000, 3 + 7)'}
+          ]
+        });
+      </script>
+
+</div>
+</body>
+</html>

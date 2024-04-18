@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Math Notepad</title>
+  <!-- meta data -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="title" content="Math Notepad">
+
+  <!-- for mobile devices like android and iphone -->
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="mathnotepad.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="scroll-root">
+  <div id="user"></div>
+  <div class="main">
+    <noscript>
+      <p style="color:white; font-weight:bold; background-color:red; margin:5px;">
+        Error: Javascript is not enabled on your browser.
+        Javascript is required to run Math Notepad.
+      </p>
+    </noscript>
+
+    <div id="content">
+      <div id="app">
+        <div class="loading">loading...</div>
+      </div>
+    </div>
+
+    <script>
+      // show an error on old browsers
+      if (typeof Object.keys === 'undefined') { // simple test for ES5 support
+        document.getElementById('app').innerHTML = '<p class="error">Error: Unsupported browser. Please upgrade your browser.</p>'
+      }
+    </script>
+
+    <!-- load the (large) javascript at the bottom of the page,
+         so the web page quickly shows up with a loading message -->
+    <script src="mathnotepad.min.js" async></script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent plugin -->
+
+  </div>
+</div>
+</body>
+</html>
